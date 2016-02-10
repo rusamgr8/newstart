@@ -1,0 +1,39 @@
+
+<ion-view title="My Class">
+<ion-nav-bar class="bar-stable">
+            <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
+        </ion-nav-bar>
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list" ng-submit="createClass()">
+            <label class="item item-input" name="class_name">
+                <span class="input-label">Class Name</span>
+                <input ng-model="myclass.name" type="text" placeholder="" required>
+            </label>
+            <div class="spacer" style="width: 283px; height: 14px;"></div>
+            <ion-checkbox ng-model="myclass.level.school" ng-true-value="'School'" name="school">
+                School
+            </ion-checkbox>
+            <ion-checkbox ng-model="myclass.level.juniorCollege" ng-true-value="'Junior College'" name="juniorCollege">
+                Junior College
+            </ion-checkbox>
+            <ion-checkbox ng-model="myclass.level.degreeCollege" ng-true-value="'Degree College'" name="degreeCollege">
+                Degree College 
+            </ion-checkbox>
+            <ion-checkbox ng-model="myclass.level.diplomaCollege" ng-true-value="'Diploma College'" name="diplomaCollege">
+                Diploma College
+            </ion-checkbox>
+            <ion-checkbox ng-model="myclass.level.others" ng-true-value="'Others'" name="others">
+                Others
+            </ion-checkbox>
+            <div class="spacer" style="width: 283px; height: 11px;"></div>
+            <label class="item item-select" name="location">
+                <span class="input-label">Locations</span>
+                <select ng-model="myclass.locations" multiple required>
+                    <option>Mumbai</option>
+                    <option>Pune</option>
+                </select>
+            </label>
+            <button class="button button-stable button-block  icon ion-android-create">Create</button>
+        </form>
+    </ion-content>
+</ion-view>

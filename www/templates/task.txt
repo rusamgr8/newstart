@@ -1,0 +1,13 @@
+tasks:
+
+validation (also show messages on user submit)
+authorization (only class owner gets option to edit the class)
+class Profile
+search and filter
+Change Menu style
+
+
+
+after snacks
+add subject
+authorization

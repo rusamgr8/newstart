@@ -1,0 +1,20 @@
+<ion-view title="Class Profile">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        
+
+        <h1>{{myclass.name}}</h1>
+<div class="button-bar">
+  <a class="button icon ion-android-create">New Activity</a>
+  <a class="button icon ion-camera"></a>
+  <a class="button icon ion-android-create">Edit Page</a>
+</div>
+        <ion-list ng-repeat="subject in myclass.subjects">
+            <ion-item>{{Subject}}</ion-item>
+        </ion-list>
+        <ion-list ng-repeat="subjectField in subjectFields">
+            <ion-item>
+                <input name="subject" ng-model="myclass.subject" type="text" placeholder="" required>
+        </ion-list>
+        <button ng-click="addSubjectToClass()" class="button button-stable button-block  icon ion-android-add-circle">Add New Subject !!</button>
+    </ion-content>
+</ion-view>

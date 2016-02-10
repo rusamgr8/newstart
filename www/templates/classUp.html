@@ -1,0 +1,19 @@
+<ion-view title="ClassUp">
+    <ion-content overflow-scroll="true" padding="true" scroll="true" class="has-header">
+        <a href="#/createClass" class="button button-energized button-outline button-block  icon ion-android-create">Create your Class</a>
+        <ion-list>
+            <label class="item item-input" name="ClassSearcher">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="Search by name">
+            </label>
+        </ion-list>
+        <h2>Classes</h2>
+        <ion-list ng-repeat="myclass in myclasses">
+            <ion-item href="#/classes/{{myclass.$id}}" class="item-thumbnail-left">
+                <img>
+                <h2>{{myclass.name}}</h2>
+                <p ng-repeat="level in myclass.level">{{level}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
